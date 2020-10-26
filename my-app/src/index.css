@@ -27,3 +27,69 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.header__container {
+  display: flex;
+  background-color: skyblue;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__navBar {
+  color: white;
+  width: 250px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__form input {
+  outline: none;
+  width: 200px;
+}
+.header__form button {
+  cursor: pointer;
+}
+
+.home__container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.home__container img {
+  margin-top: 50px;
+  width: 300px;
+  border-radius: 5px;
+}
+.home__container p {
+  font-size: 25px;
+  text-align: center;
+}
+
+.follow__container {
+  display: flex;
+  justify-content: center;
+}
+
+.follow__list{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.follow__item{
+  margin: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.follow__item img{
+  width: 100px;
+  border-radius: 5px;
+}
+
+.follow__item p{
+  text-align: center;
+}
