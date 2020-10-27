@@ -5,6 +5,7 @@ import {
   updateUserNameAction,
   getFollowersAction,
   getUsersAction,
+  setClickCountAction,
 } from "../../redux/actions/githubActions";
 
 class Header extends React.Component {
@@ -20,10 +21,13 @@ class Header extends React.Component {
   };
 
   handleOnClick = (event) => {
+    const { updateUserName, getUser, getFollowers, setCount } = this.props;
     event.preventDefault();
-    this.props.updateUserName(this.state.userName);
-    this.props.getUser(this.state.userName);
-    this.props.getFollowers(this.state.userName, 1, 10);
+    updateUserName(this.state.userName);
+    getUser(this.state.userName);
+    getFollowers(this.state.userName, 1, 10);
+    setCount(1);
+
     this.setState({
       userName: "",
     });
@@ -42,7 +46,7 @@ class Header extends React.Component {
             onChange={this.handleOnChange}
             value={this.state.userName}
           ></input>
-          <button onClick={this.handleOnClick}>Sumbit</button>
+          <button onClick={this.handleOnClick}>Submit</button>
         </form>
       </div>
     );
@@ -59,6 +63,7 @@ const mapDispatchToProps = (dispatch) => {
     getUser: (userName) => dispatch(getUsersAction(userName)),
     getFollowers: (userName, pageIndex, pageSize) =>
       dispatch(getFollowersAction(userName, pageIndex, pageSize)),
+    setCount: (number) => dispatch(setClickCountAction(number)),
   };
 };
 

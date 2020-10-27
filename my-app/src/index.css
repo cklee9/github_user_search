@@ -12,9 +12,6 @@ code {
     monospace;
 }
 
-:root {
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +27,7 @@ body {
 
 .header__container {
   display: flex;
-  background-color: skyblue;
+  background-color: sandybrown;
   height: 50px;
   position: fixed;
   width: 100%;
@@ -47,49 +44,77 @@ body {
 
 .header__form input {
   outline: none;
-  width: 200px;
+  width: 300px;
+  height: 25px;
 }
 .header__form button {
+  height: 25px;
   cursor: pointer;
 }
 
+/* home styles */
 .home__container {
-  width: 50%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.home__user__container {
+  width: 30%;
+  height: 35%;
   display: flex;
   justify-content: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-.home__container img {
-  margin-top: 50px;
-  width: 300px;
   border-radius: 5px;
 }
-.home__container p {
-  font-size: 25px;
+
+.home__user img {
+  width: 100%;
+  border-radius: 5px;
+}
+.home__user__text {
   text-align: center;
 }
 
 .follow__container {
+  padding-top: 50px;
   display: flex;
   justify-content: center;
 }
 
-.follow__list{
-  margin-top: 50px;
+.follow__form {
+  width: 50%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  background-color: lightgrey;
 }
-.follow__item{
-  margin: 5px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+.follow__form button {
+  height: 25px;
+  background-color: sandybrown;
+  cursor: pointer;
 }
 
-.follow__item img{
+.follow__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 500px;
+  overflow: auto;
+}
+.follow__item {
+  height: 125px;
+  background-color: white;
+  margin: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+}
+.follow__item:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12), 0 8px 12px rgba(0, 0, 0, 0.24);
+}
+.follow__item img {
   width: 100px;
   border-radius: 5px;
 }
 
-.follow__item p{
+.follow__item p {
   text-align: center;
 }
