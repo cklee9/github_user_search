@@ -40,12 +40,6 @@ class Following extends React.Component {
       </div>
     );
   }
-
-  componentDidMount() {
-    this.setState({
-      clickCount: 1,
-    });
-  }
 }
 
 const mapStateToProps = (state) => {
