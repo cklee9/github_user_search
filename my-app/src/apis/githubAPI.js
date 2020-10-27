@@ -1,6 +1,8 @@
 import axios from "axios";
 
 axios("https://api.github.com", {
+  auth: {
+  },
 });
 
 export const getUsers = (userName) => {

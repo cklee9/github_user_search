@@ -27,7 +27,6 @@ class Header extends React.Component {
     getUser(this.state.userName);
     getFollowers(this.state.userName, 1, 10);
     setCount(1);
-
     this.setState({
       userName: "",
     });
@@ -54,7 +53,7 @@ class Header extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return {};
+  return { clickCount: state.clickCount };
 };
 
 const mapDispatchToProps = (dispatch) => {

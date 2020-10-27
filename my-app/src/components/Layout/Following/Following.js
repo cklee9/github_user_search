@@ -6,17 +6,11 @@ import {
 } from "../../../redux/actions/githubActions";
 
 class Following extends React.Component {
-  // state = {
-  //   clickCount: 1,
-  // };
   handleLoadButtonClick = (event) => {
     event.preventDefault();
-    // this.setState({
-    //   clickCount: this.state.clickCount + 1,
-    // });
-    const { clickCount, getFollowers, updateCount } = this.props;
+    const { getFollowers, user, clickCount, updateCount } = this.props;
     updateCount();
-    getFollowers(this.props.user.login, 1, clickCount * 10);
+    getFollowers(user.login, 1, (clickCount + 1) * 10);
   };
   render() {
     const { user, followers, userName } = this.props;
@@ -36,7 +30,7 @@ class Following extends React.Component {
                   <a href={follower.html_url}>
                     <img src={follower.avatar_url}></img>
                   </a>
-                  <p>{follower.login}</p>
+                  <h5>{follower.login}</h5>
                 </div>
               ))}
             </div>
@@ -59,6 +53,7 @@ const mapStateToProps = (state) => {
     userName: state.userName,
     user: state.user,
     followers: state.followers,
+    clickCount: state.clickCount,
   };
 };
 

@@ -115,6 +115,7 @@ body {
   border-radius: 5px;
 }
 
-.follow__item p {
+.follow__item h5{
   text-align: center;
+  width: 100%;
 }
